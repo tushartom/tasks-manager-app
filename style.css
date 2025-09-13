@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100%;
+  background-color: #e2ebf0;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.header {
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+
+  padding-block: 1rem;
+  color: white;
+}
+
+.logo {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.tasks-container {
+  max-width: 600px;
+  margin-inline: auto;
+
+  padding-top: 2rem;
+}
+.no-tasks {
+  padding-top: 1.5rem;
+}
+.tasks-list {
+  text-align: justify;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.task-status-done .task-description {
+  text-decoration-line: line-through;
+  font-style: italic;
+}
+
+.add-task-btn {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+.author {
+  position: fixed;
+  bottom: 4rem;
+  right: 1.5rem;
+  font-family: "Ms Madi", cursive;
+  font-size: 1.8rem;
+}
+
+.task-status-btn {
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  /* line-height: 20px; */
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.task-delete-btn {
+  background-color: #ea4c89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+
+  line-height: 20px;
+
+  margin: 0;
+  outline: none;
+  padding: 8px 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+}
+
+.add-task-btn {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px 0.8em;
+
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.add-task-btn:hover,
+.add-task-btn:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.add-task-btn:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.add-task-btn:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+.material-icons {
+  font-size: 18px;
+}
+.btns-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .task-item {
+    padding-bottom: 1rem;
+  }
+  body {
+    font-size: 15px;
+  }
+}
