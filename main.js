@@ -12,9 +12,14 @@ document.addEventListener("DOMContentLoaded", renderTasksOnPageLoad);
 addTaskBtn.addEventListener("click", handleAddTask);
 
 function renderTasksOnPageLoad() {
+  if (!localStorage.getItem("tasksArray")) {
+    localStorage.setItem("tasksArray", JSON.stringify([]));
+  }
   let tasksArray = JSON.parse(localStorage.getItem("tasksArray"));
 
   if (tasksArray.length == 0) return;
+
+  document.querySelector(".no-tasks").style.display = "none";
 
   tasksArray.forEach((task) => {
     let taskEle = createTaskEle(task.description);
